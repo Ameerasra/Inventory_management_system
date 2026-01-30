@@ -1,6 +1,6 @@
 import { Head, router, Link } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -51,10 +51,12 @@ const item = {
 
 export default function InventoryHistory({ transactions, filters }: Props) {
     const [searchTerm, setSearchTerm] = useState(filters.search || '');
+    const [prevSearch, setPrevSearch] = useState(filters.search);
 
-    useEffect(() => {
+    if (filters.search !== prevSearch) {
         setSearchTerm(filters.search || '');
-    }, [filters.search]);
+        setPrevSearch(filters.search);
+    }
 
     useEffect(() => {
         const timer = setTimeout(() => {

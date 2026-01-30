@@ -2,7 +2,7 @@ import { Head } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, PieChart, Pie, Cell, AreaChart, Area } from 'recharts';
-import { ArrowUpRight, ArrowDownRight, Package, ListChecks, Activity, Warehouse, TrendingUp, AlertTriangle, Boxes, History } from 'lucide-react';
+import { Activity, Warehouse, TrendingUp, AlertTriangle, Boxes, History } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 

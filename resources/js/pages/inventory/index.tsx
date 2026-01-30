@@ -227,7 +227,7 @@ export default function InventoryIndex({ items, units, categories }: Props) {
         }
     };
 
-    const updateItemField = (index: number, field: string, value: any) => {
+    const updateItemField = (index: number, field: string, value: string | number) => {
         const newItems = [...addItemForm.data.items];
         newItems[index] = { ...newItems[index], [field]: value };
         addItemForm.setData('items', newItems);
@@ -255,7 +255,7 @@ export default function InventoryIndex({ items, units, categories }: Props) {
         }
     };
 
-    const updateBulkField = (index: number, field: string, value: any) => {
+    const updateBulkField = (index: number, field: string, value: string | number) => {
         const newTransactions = [...bulkStockForm.data.transactions];
         newTransactions[index] = { ...newTransactions[index], [field]: value };
         bulkStockForm.setData('transactions', newTransactions);
@@ -630,7 +630,7 @@ export default function InventoryIndex({ items, units, categories }: Props) {
                                             </TableCell>
                                         </TableRow>
                                     ) : (
-                                        filteredItems.map((item, idx) => (
+                                        filteredItems.map((item) => (
                                             <TableRow
                                                 key={item.id}
                                                 className="group border-slate-50 dark:border-slate-800/50 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors"
@@ -855,7 +855,7 @@ export default function InventoryIndex({ items, units, categories }: Props) {
 }
 
 // Mock route function if not defined in windows environment
-const route = (window as any).route || ((name: string, params?: any) => {
+const route = (window as Window & { route?: (name: string, params?: string | number | object) => string }).route || ((name: string, params?: string | number | object) => {
     if (name === 'inventory.store') return '/inventory';
     if (name === 'inventory.stock.update') return `/inventory/${params}/stock`;
     if (name === 'inventory.bulk-stock.update') return '/inventory/bulk-stock';

@@ -1,8 +1,8 @@
 import { Head, Link, usePage } from '@inertiajs/react';
 import { dashboard, login, register } from '@/routes';
 import type { SharedData } from '@/types';
-import { Box, TrendingUp, ShieldCheck, Zap, Layers, ArrowRight, Play, CheckCircle2 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Box, ShieldCheck, Zap, Layers, ArrowRight, Play, CheckCircle2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import logo from '@/assets/logo.png';
 
 export default function Welcome({
