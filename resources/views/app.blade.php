@@ -30,10 +30,10 @@
             }
         </style>
 
-        <title inertia>{{ config('app.name', 'InventoryPro') }}</title>
+        <title inertia>{{ config('app.name', 'Inventory Pro') }}</title>
 
-        <link rel="icon" href="/favicon.ico" sizes="any">
-        <link rel="image" href="../assets/logo.png" type="image/png">
+        <link rel="icon" href="/logo.png" type="image/png">
+
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
         <link rel="preconnect" href="https://fonts.bunny.net">
