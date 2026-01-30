@@ -3,7 +3,7 @@ import AppLayout from '@/layouts/app-layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { cn } from '@/lib/utils';
-import { ArrowLeft, Package, History, Activity, Calendar, FileText, ChevronRight, TrendingUp, TrendingDown, Clock, Info, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Package, History, Activity, FileText, TrendingUp, Clock, ShieldCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Transaction {

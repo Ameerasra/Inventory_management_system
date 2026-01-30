@@ -42,20 +42,6 @@ interface Props {
     categories: Category[];
 }
 
-const container = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.05
-        }
-    }
-};
-
-const itemAnim = {
-    hidden: { y: 10, opacity: 0 },
-    show: { y: 0, opacity: 1 }
-};
 
 // Searchable Item Selector Component
 function SearchableItemSelector({

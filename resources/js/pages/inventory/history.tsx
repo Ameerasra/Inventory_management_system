@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import { History, ArrowUpRight, ArrowDownLeft, FileText, Search, Filter, Calendar, Package } from 'lucide-react';
+import { ArrowUpRight, ArrowDownLeft, FileText, Search, Filter, Package } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useState, useEffect } from 'react';
 
@@ -43,15 +43,6 @@ interface Props {
     };
 }
 
-const container = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.05
-        }
-    }
-};
 
 const item = {
     hidden: { opacity: 0, y: 20 },
